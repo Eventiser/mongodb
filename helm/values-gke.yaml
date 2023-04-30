@@ -1,0 +1,18 @@
+image:
+  repository: asia.gcr.io/goevents-369010/mongo
+  tag: 5.0.10
+  pullPolicy: "IfNotPresent"
+
+
+## MongoDB admin password
+mongodbRootUsername: eventizer
+mongodbRootPassword: 19112022
+
+
+## Enable persistence using Persistent Volume Claims
+persistence:
+  mountPath: /data/db
+  subPath: ""
+  storageClassName: "standard-rwo"
+  accessModes: ["ReadWriteOnce"]
+  size: 2Gi
